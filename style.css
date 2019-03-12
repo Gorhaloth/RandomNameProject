@@ -1,0 +1,11 @@
+body {
+    background-color: darkblue;
+}
+#name {
+    color: aliceblue;
+    text-align: center;
+}
+#Button {
+    text-align: center;
+    color: black;
+}
