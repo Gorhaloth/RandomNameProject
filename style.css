@@ -9,3 +9,8 @@ body {
     text-align: center;
     color: black;
 }
+#statTable {
+    color: white;
+    display: flex;
+    justify-content: center;
+}

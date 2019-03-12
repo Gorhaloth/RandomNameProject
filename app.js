@@ -1,5 +1,6 @@
 var button = document.getElementById('button');
 var Name = document.getElementById('name');
+var statButton = document.getElementById('statButton');
 var pre = "";
 var mid = "";
 var suf = "";
@@ -136,10 +137,29 @@ function CreateName(){
     }else if(random3 == 19){
         suf = sufR[19];
     }
-    
+
     Name.innerHTML = pre + mid + suf;
 }
 
+function CreateStats(){
+    event.preventDefault();
+    var RSTR = Math.floor(Math.random() * 16) + 3;
+    var RDEX = Math.floor(Math.random() * 16) + 3;
+    var RCON = Math.floor(Math.random() * 16) + 3;
+    var RINT = Math.floor(Math.random() * 16) + 3;
+    var RWIS = Math.floor(Math.random() * 16) + 3;
+    var RCHA = Math.floor(Math.random() * 16) + 3;
+    STR.innerHTML = RSTR;
+    DEX.innerHTML = RDEX;
+    CON.innerHTML = RCON;
+    INT.innerHTML = RINT;
+    WIS.innerHTML = RWIS;
+    CHA.innerHTML = RCHA;
+}
+
+statButton.onclick= function(){
+    CreateStats();
+}
 
 button.onclick = function(){
     CreateName();
