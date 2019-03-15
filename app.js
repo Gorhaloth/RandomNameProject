@@ -8,8 +8,6 @@ var preR = ['', 'A', 'Ma', 'El', 'Pa', 'Ta', 'Si', 'Va', 'O', 'Re', 'Na', 'La', 
 var midR = ['dell', 'quil', 'kel', 'shen', 'far', 'ched', 'bar', 'gran', 'hal', 'jen', 'lim', 'mor', 'net', 'penn', 'rond', 'sark', 'tur', 'vash', 'yor', 'zen'];
 var sufR = ['', 'am', 'ess', 'in', 'us', 'ic', 'ar', 'a', 'ac', 'ai', 'al', 'an', 'ea', 'el', 'er', 'ett', 'id', 'il', 'is', 'or'];
 var R11;
-var R12;
-var R13;
 
 function CreateName(){
     event.preventDefault;
@@ -25,17 +23,17 @@ function CreateName(){
 function CreateStats(){
     event.preventDefault();
     randomRoll(); 
-    RSTR = R11;
+    RSTR = total;
     randomRoll(); 
-    RDEX = R11;
+    RDEX = total;
     randomRoll(); 
-    RCON = R11;
+    RCON = total;
     randomRoll(); 
-    RINT = R11;
+    RINT = total;
     randomRoll(); 
-    RWIS = R11;
+    RWIS = total;
     randomRoll(); 
-    RCHA = R11;
+    RCHA = total;
     STR.innerHTML = RSTR;
     DEX.innerHTML = RDEX;
     CON.innerHTML = RCON;
@@ -50,12 +48,11 @@ function randomRoll(){
     R2 = Math.floor(Math.random() * 6) + 1,
     R3 = Math.floor(Math.random() * 6) + 1,
     R4 = Math.floor(Math.random() * 6) + 1];
-    var i;
-    console.log([1]);
-    for (i = 0; i < numbers.length; i++) {
-        console.log(numbers[1]);
-      }
+    var min = Math.min.apply(null, numbers);
+    total = R1 + R2 + R3 + R4 - min;
 }
+
+
 
 statButton.onclick= function(){
     CreateStats();
